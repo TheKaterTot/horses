@@ -1,0 +1,8 @@
+<h1>Jockeys</h1>
+<% @jockeys.each do |jockey| %>
+<h3><a href="/jockeys/<%= jockey.id %>"><%= jockey.name %></a></h3>
+  <p>Horses</p>
+  <% jockey.horses.each do |horse| %>
+  <%= horse.name %>
+  <% end %>
+<% end %>

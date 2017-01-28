@@ -1,0 +1,14 @@
+<h3><a href="/jockeys">Jockey Directory</a></h3>
+<h3><a href="/jockeys/<%= @jockey.id %>/edit">Edit Jockey</a></h3>
+<h3><a href="/jockeys/<%= @jockey.id %>/horses/new">Add Horse</a></h3>
+<form action="/jockeys/<%= @jockey.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input class="btn btn-primary" type="submit" value="delete"/>
+    <h1><%= @jockey.name %></h1>
+    <ul>
+    <% @jockey.horses.each do |horse| %>
+    <li id="horsey"><%= horse.name %><a href="/jockeys/<%= @jockey.id %>/horses/<%= horse.id %>/edit">Edit Horse</a></li>
+    <%end%>
+    <%= @jockey.horses.total_winnings %>
+    </ul>
+  </form>
