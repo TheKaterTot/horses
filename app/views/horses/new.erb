@@ -1,0 +1,7 @@
+<h1>New Horse</h1>
+<form action="/jockeys/<%= @jockey.id %>/horses" method="post">
+  <label for="horse[name]"><input type="text" name="horse[name]" placeholder="Name"></input></label></br>
+  <label for="horse[age]"><input type="text" name="horse[age]" placeholder="Age"></input></lablel></br>
+  <label for="horse[total_winnings]"><input type="text" name="horse[total_winnings]" placeholder="Winnings"></input></label></br>
+  <input class="btn btn-primary" type="submit" value="Submit"></input>
+</form>

@@ -1,0 +1,6 @@
+<h1>Horses</h1>
+<% @horses.each do |horse| %>
+<h3><a href="/horses/<%= horse.id %>"><%= horse.name %></a></h3>
+  <p><%= horse.age %></p>
+  <p><%= horse.total_winnings %></p>
+<% end %>
